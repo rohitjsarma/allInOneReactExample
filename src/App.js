@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+//import ClassBasedComp from './component/classBasedComp';
 import './App.css';
+//import FunctionalComp from './component/functionalComp';
+import Employee from './component/reduxExample';
+import {store} from "./component/redux/store";
+import {Provider} from 'react-redux';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+     <Provider store={store}>
+        {/* <ClassBasedComp/>
+      <FunctionalComp/> */}
+      <Employee/>
+
+    </Provider>
     </div>
   );
 }
